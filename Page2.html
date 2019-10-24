@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="stylesheet2.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('#videos a').each(function() {
+      var data = $(this).attr('data');
+      $(this).append('<img src="http://img.youtube.com/vi/'+data+'/maxresdefault.jpg" />');
+   });
+
+   $('#videos a').click(function() {
+      var data = $(this).attr('data');
+      $('#loader').append('<iframe src="https://www.youtube.com/embed/'+data+'" frameborder="0" allowfullscreen></iframe>');
+      $('#overlay').fadeIn(250);
+   });
+
+   $('#close').click(function() {
+      $('#overlay').fadeOut(250,function() {
+         $('#loader').html('');
+      });
+   });
+});
+</script>
+</head>
+<body>
+
+  <div id="videos">
+    <a data="N1-Jmq7BLFE"></a>
+     <a data="eo-YGgxLG3w"></a>
+     <a data="3PQgi_J42no"></a>
+     <a data="SWIK0SfT4Mw"></a>
+  </div>
+
+  <div id="overlay">
+     <div class="modal">
+        <div id="close">X</div>
+        <div id="loader"></div>
+     </div>
+  </div>
+  <div class="content">
+    <h1>Wellcome to Bulgaria</h1>
+    <p>Soul-stirring mountains rival golden beaches, while cities hum with nightlife and art.
+      Within Bulgaria’s beguiling blend of nature and history, unforgettable adventures are guaranteed. Explore the videos above. </p>
+    <form>
+    <button id="myBtn" type="submit" formaction="index.html">Go back</button>
+  </form>
+  </div>
+
+</body>
+</html>

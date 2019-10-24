@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Critical Interactivity</title>
+<link href="StyleSheet.css" rel="stylesheet" type="text/css">
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+</head>
+<body>
+
+  <video autoplay muted loop id="myVideo">
+  <source src="video/starnight.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>Critical Interactivity</h1>
+  <h2>Project 3 Vanya Rashev</h2>
+  <p>No better way is there to learn to love Nature than to understand Art.
+    It dignifies every flower of the field. And, the boy who sees the thing of beauty which a bird on the wing becomes when transferred to wood
+    or canvas will probably not throw the customary stone. Oscar Wilde
+</p>
+
+  <form>
+  <button id="myBtn" type="submit" formaction="Page2.html">Gallery 1</button>
+</form>
+<form>
+<button id="myBtn" type="submit" formaction="Page3.html">Gallery 2</button>
+</form>
+</div>
+</body>
+</html>
